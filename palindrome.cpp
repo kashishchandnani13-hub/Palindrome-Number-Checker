@@ -5,13 +5,17 @@ class Palindrome
 {
     int num;
 
-public:
+    public:
     void input() {
         cout << "Enter a number to check: ";
         cin >> num;
     }
 
     void check() {
+        if(num < 0) {
+            cout << num << " is not a palindrome number\n";
+        }
+        
         int temp = num;  // Preserve original number
         int rev = 0, rem;
 
